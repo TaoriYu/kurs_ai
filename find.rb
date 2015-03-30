@@ -8,18 +8,21 @@ request = String.new
 def responses( request )
 
 	"I'm in responses-method".play
+	puts request
 	
 	case request
 
-		when "yes", "Ok, boss, what do you want?".play
-		when "no", "Ok, boss, but let me do something for you".play
+		when "yes"
+			'Ok, boss, what do you want?'.play
+		when "no"
+			'Ok, boss, but let me do something for you'.play
 	end
 end
 
 def get_request
 
 	request = ""
-	request = gets
+	request = gets.chomp
 	return request
 	
 end
