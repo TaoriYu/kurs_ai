@@ -8,23 +8,26 @@ request = String.new
 def responses( request )
 
 	"I'm in responses-method".play
-	puts request
 	
 	case request
 
-		when request == "yes" 
-			"Ok, boss, what do you want?".play
-			get_request
-
-		when "no"
-			"Ok, boss, but let me do something for you".play
+		when "yes", "Ok, boss, what do you want?".play
+		when "no", "Ok, boss, but let me do something for you".play
 	end
 end
 
+def get_request
+
+	request = ""
+	request = gets
+	return request
+	
+end
 
 "Hello. Can I do something for you?".play
-request = gets
+request = get_request
 responses( request )
+request = get_request
 
 
 original_window = GUI::Window.new "original"
