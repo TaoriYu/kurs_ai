@@ -10,10 +10,10 @@ def responses( request )
 	case request
 
 		when "yes"
-			'Ok, tsar, what do you want?'.play
+			'Ok, boss, what do you want?'.play
 			request = get_request
 		when "no"
-			'Ok, csar, farewell'.play
+			'Ok, boss, farewell'.play
 			exit
 		when "how many figures do you see?"
 			how_many
